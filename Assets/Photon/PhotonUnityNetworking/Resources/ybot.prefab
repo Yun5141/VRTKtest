@@ -549,9 +549,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8213375862298054461}
   - component: {fileID: 8213375862298054460}
-  - component: {fileID: 8213375862298054463}
-  - component: {fileID: 8213375862298054462}
-  - component: {fileID: 8213375862298054337}
   - component: {fileID: 8213375862298054336}
   m_Layer: 0
   m_Name: ybot
@@ -585,7 +582,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8213375862298054339}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 9000000, guid: 04f3ee404edc94204a85b3a042cfd1a7, type: 3}
   m_Controller: {fileID: 0}
   m_CullingMode: 1
@@ -596,56 +593,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &8213375862298054463
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8213375862298054339}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ObservedComponentsFoldoutOpen: 1
-  Group: 0
-  prefixField: -1
-  observableSearch: 2
-  Synchronization: 3
-  OwnershipTransfer: 0
-  ObservedComponents:
-  - {fileID: 8213375862298054462}
-  viewIdField: 0
-  InstantiationId: 0
-  isRuntimeInstantiated: 0
---- !u!114 &8213375862298054462
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8213375862298054339}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SynchronizePosition: 1
-  m_SynchronizeRotation: 1
-  m_SynchronizeScale: 0
---- !u!114 &8213375862298054337
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8213375862298054339}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 18ec1983e3b19d44bb2fee2b9db91d82, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &8213375862298054336
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -762,7 +709,7 @@ MonoBehaviour:
       bendGoalWeight: 0
       swivelOffset: 0
     locomotion:
-      weight: 1
+      weight: 0
       footDistance: 0.3
       stepThreshold: 0.4
       angleThreshold: 60
@@ -2562,7 +2509,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8213375863877846080}
   m_LocalRotation: {x: 0, y: -0, z: -2.3158745e-36, w: 1}
-  m_LocalPosition: {x: -0.000000023707482, y: 0.1032183, z: 0.031424288}
+  m_LocalPosition: {x: -0.00000002370748, y: 0.1032183, z: 0.031424288}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 8213375863030040902}
