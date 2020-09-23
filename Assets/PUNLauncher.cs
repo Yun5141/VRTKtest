@@ -28,12 +28,12 @@ public class PUNLauncher : MonoBehaviourPunCallbacks
     {
         if (PhotonNetwork.IsMasterClient)
         {
-            Player1 = PhotonNetwork.Instantiate("ybot", new Vector3(3, 0, 0), Quaternion.identity, 0);
+            Player1 = PhotonNetwork.Instantiate("Rig", new Vector3(3, 0, 0), Quaternion.identity, 0);
             Debug.Log("GameInfo: Instantiate Player 1 Successfully");
         }
         else
         {
-            Player2 = PhotonNetwork.Instantiate("ybot", new Vector3(-3, 0, 0), Quaternion.identity, 0);
+            Player2 = PhotonNetwork.Instantiate("Rig", new Vector3(-3, 0, 0), Quaternion.identity, 0);
             Debug.Log("GameInfo: Instantiate Player 2 Successfully");
         }
     }
