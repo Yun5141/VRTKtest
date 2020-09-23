@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{4ADCE7A6-0B02-A82F-95D8-6AB025368ACB}</ProjectGuid>
+    <ProjectGuid>{073D33CF-A71A-0F68-32F2-188C06C9E23C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>PhotonWebSocket</AssemblyName>
@@ -290,40 +290,40 @@
  <HintPath>/Applications/Unity/Hub/Editor/2018.3.14f1/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll</HintPath>
  </Reference>
  <Reference Include="Photon3Unity3D">
- <HintPath>/Users/y/Downloads/2020VRGameTest/VRTK/Assets/Photon/PhotonLibs/Photon3Unity3D.dll</HintPath>
+ <HintPath>/Users/y/Desktop/VRTKtest/Assets/Photon/PhotonLibs/Photon3Unity3D.dll</HintPath>
  </Reference>
  <Reference Include="websocket-sharp">
- <HintPath>/Users/y/Downloads/2020VRGameTest/VRTK/Assets/Photon/PhotonLibs/WebSocket/websocket-sharp.dll</HintPath>
+ <HintPath>/Users/y/Desktop/VRTKtest/Assets/Photon/PhotonLibs/WebSocket/websocket-sharp.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.Advertisements">
- <HintPath>/Users/y/Downloads/2020VRGameTest/VRTK/Library/PackageCache/com.unity.ads@2.0.8/Editor/UnityEditor.Advertisements.dll</HintPath>
+ <HintPath>/Users/y/Desktop/VRTKtest/Library/PackageCache/com.unity.ads@2.0.8/Editor/UnityEditor.Advertisements.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Analytics.Tracker">
- <HintPath>/Users/y/Downloads/2020VRGameTest/VRTK/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
+ <HintPath>/Users/y/Desktop/VRTKtest/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Analytics.Editor">
- <HintPath>/Users/y/Downloads/2020VRGameTest/VRTK/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
+ <HintPath>/Users/y/Desktop/VRTKtest/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Analytics.StandardEvents">
- <HintPath>/Users/y/Downloads/2020VRGameTest/VRTK/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
+ <HintPath>/Users/y/Desktop/VRTKtest/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.Purchasing">
- <HintPath>/Users/y/Downloads/2020VRGameTest/VRTK/Library/PackageCache/com.unity.purchasing@2.0.6/Editor/UnityEditor.Purchasing.dll</HintPath>
+ <HintPath>/Users/y/Desktop/VRTKtest/Library/PackageCache/com.unity.purchasing@2.0.6/Editor/UnityEditor.Purchasing.dll</HintPath>
  </Reference>
  <Reference Include="Malimbe.XmlDocumentationAttribute">
- <HintPath>/Users/y/Downloads/2020VRGameTest/VRTK/Library/PackageCache/io.extendreality.malimbe@9.6.3/Runtime/Malimbe.XmlDocumentationAttribute.dll</HintPath>
+ <HintPath>/Users/y/Desktop/VRTKtest/Library/PackageCache/io.extendreality.malimbe@9.6.3/Runtime/Malimbe.XmlDocumentationAttribute.dll</HintPath>
  </Reference>
  <Reference Include="Malimbe.MemberClearanceMethod">
- <HintPath>/Users/y/Downloads/2020VRGameTest/VRTK/Library/PackageCache/io.extendreality.malimbe@9.6.3/Runtime/Malimbe.MemberClearanceMethod.dll</HintPath>
+ <HintPath>/Users/y/Desktop/VRTKtest/Library/PackageCache/io.extendreality.malimbe@9.6.3/Runtime/Malimbe.MemberClearanceMethod.dll</HintPath>
  </Reference>
  <Reference Include="Malimbe.BehaviourStateRequirementMethod">
- <HintPath>/Users/y/Downloads/2020VRGameTest/VRTK/Library/PackageCache/io.extendreality.malimbe@9.6.3/Runtime/Malimbe.BehaviourStateRequirementMethod.dll</HintPath>
+ <HintPath>/Users/y/Desktop/VRTKtest/Library/PackageCache/io.extendreality.malimbe@9.6.3/Runtime/Malimbe.BehaviourStateRequirementMethod.dll</HintPath>
  </Reference>
  <Reference Include="Malimbe.MemberChangeMethod">
- <HintPath>/Users/y/Downloads/2020VRGameTest/VRTK/Library/PackageCache/io.extendreality.malimbe@9.6.3/Runtime/Malimbe.MemberChangeMethod.dll</HintPath>
+ <HintPath>/Users/y/Desktop/VRTKtest/Library/PackageCache/io.extendreality.malimbe@9.6.3/Runtime/Malimbe.MemberChangeMethod.dll</HintPath>
  </Reference>
  <Reference Include="Malimbe.PropertySerializationAttribute">
- <HintPath>/Users/y/Downloads/2020VRGameTest/VRTK/Library/PackageCache/io.extendreality.malimbe@9.6.3/Runtime/Malimbe.PropertySerializationAttribute.dll</HintPath>
+ <HintPath>/Users/y/Desktop/VRTKtest/Library/PackageCache/io.extendreality.malimbe@9.6.3/Runtime/Malimbe.PropertySerializationAttribute.dll</HintPath>
  </Reference>
  <Reference Include="netstandard">
  <HintPath>/Applications/Unity/Hub/Editor/2018.3.14f1/Unity.app/Contents/NetStandard/ref/2.0.0/netstandard.dll</HintPath>

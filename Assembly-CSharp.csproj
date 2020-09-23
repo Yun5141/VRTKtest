@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{CE9F5A8D-3F6D-02BE-F7C5-4AECD3F5ADB0}</ProjectGuid>
+    <ProjectGuid>{C53C27A7-9BB0-1098-69B8-28626FA1F6CA}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -67,6 +67,27 @@
      <Compile Include="Assets\Photon\PhotonRealtime\Demos\DemoLoadBalancing\ConnectAndJoinRandomLb.cs" />
      <Compile Include="Assets\Player.cs" />
      <Compile Include="Assets\PUNLauncher.cs" />
+     <Compile Include="Assets\transfer\Scripts\Character\IKTargetConnect.cs" />
+     <Compile Include="Assets\transfer\Scripts\Character\ScriptAdder.cs" />
+     <Compile Include="Assets\transfer\Scripts\GamePlay\GameController.cs" />
+     <Compile Include="Assets\transfer\Scripts\GamePlay\InitChar.cs" />
+     <Compile Include="Assets\transfer\Scripts\GamePlay\InitEnv.cs" />
+     <Compile Include="Assets\transfer\Scripts\GamePlay\Mass.cs" />
+     <Compile Include="Assets\transfer\Scripts\GamePlay\RopeDrawer.cs" />
+     <Compile Include="Assets\transfer\Scripts\GamePlay\Slider.cs" />
+     <Compile Include="Assets\transfer\Scripts\PlayerMovement.cs" />
+     <Compile Include="Assets\transfer\Scripts\UI\GetTime.cs" />
+     <Compile Include="Assets\transfer\Scripts\UI\ResultPanel.cs" />
+     <Compile Include="Assets\transfer\Scripts\UI\TargetToCanvas.cs" />
+     <Compile Include="Assets\transfer\Scripts\UI\UIInteractionEvents.cs" />
+     <Compile Include="Assets\transfer\Scripts\VRTK\AfterResultEventListener.cs" />
+     <Compile Include="Assets\transfer\Scripts\VRTK\CameraRigPositionSetup.cs" />
+     <Compile Include="Assets\transfer\Scripts\VRTK\IgnoreFenceWall.cs" />
+     <Compile Include="Assets\transfer\Scripts\VRTK\IgnoreLeftPointer.cs" />
+     <Compile Include="Assets\transfer\Scripts\VRTK\IgnoreRightPointer.cs" />
+     <Compile Include="Assets\transfer\Scripts\VRTK\ResetPosition.cs" />
+     <Compile Include="Assets\transfer\Scripts\VRTK\TargetSetup.cs" />
+     <Compile Include="Assets\transfer\Scripts\VRTK\VRTKScriptsManager.cs" />
      <Compile Include="Assets\VRTK\Examples\ExampleResources\SceneResources\[001 - Interactions] ControllerEvents\Scripts\VRTKExample_ControllerEventsDelegateListeners.cs" />
      <Compile Include="Assets\VRTK\Examples\ExampleResources\SceneResources\[002 - Pointers] StraightPointer\Scripts\VRTKExample_PointerObjectHighlighterActivator.cs" />
      <Compile Include="Assets\VRTK\Examples\ExampleResources\SceneResources\[003 - Pointers] BezierPointer\Scripts\VRTKExample_BezierPointerChanger.cs" />
@@ -423,31 +444,31 @@
      <None Include="Assets\VRTK\Source\Scripts\Internal\Shaders\Unlit_TransparentColor.shader" />
      <None Include="Assets\Photon\PhotonUnityNetworking\changelog.txt" />
  <Reference Include="Supyrb.Editor">
- <HintPath>/Users/y/Downloads/2020VRGameTest/VRTK/Library/ScriptAssemblies/Supyrb.Editor.dll</HintPath>
+ <HintPath>/Users/y/Desktop/VRTKtest/Library/ScriptAssemblies/Supyrb.Editor.dll</HintPath>
  </Reference>
  <Reference Include="VRTK.Prefabs.Runtime">
- <HintPath>/Users/y/Downloads/2020VRGameTest/VRTK/Library/ScriptAssemblies/VRTK.Prefabs.Runtime.dll</HintPath>
+ <HintPath>/Users/y/Desktop/VRTKtest/Library/ScriptAssemblies/VRTK.Prefabs.Runtime.dll</HintPath>
  </Reference>
  <Reference Include="Zinnia.Editor">
- <HintPath>/Users/y/Downloads/2020VRGameTest/VRTK/Library/ScriptAssemblies/Zinnia.Editor.dll</HintPath>
+ <HintPath>/Users/y/Desktop/VRTKtest/Library/ScriptAssemblies/Zinnia.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro.Editor">
- <HintPath>/Users/y/Downloads/2020VRGameTest/VRTK/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+ <HintPath>/Users/y/Desktop/VRTKtest/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.PackageManagerUI.Editor">
- <HintPath>/Users/y/Downloads/2020VRGameTest/VRTK/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+ <HintPath>/Users/y/Desktop/VRTKtest/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.CollabProxy.Editor">
- <HintPath>/Users/y/Downloads/2020VRGameTest/VRTK/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+ <HintPath>/Users/y/Desktop/VRTKtest/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Zinnia.Runtime">
- <HintPath>/Users/y/Downloads/2020VRGameTest/VRTK/Library/ScriptAssemblies/Zinnia.Runtime.dll</HintPath>
+ <HintPath>/Users/y/Desktop/VRTKtest/Library/ScriptAssemblies/Zinnia.Runtime.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro">
- <HintPath>/Users/y/Downloads/2020VRGameTest/VRTK/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+ <HintPath>/Users/y/Desktop/VRTKtest/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Analytics.DataPrivacy">
- <HintPath>/Users/y/Downloads/2020VRGameTest/VRTK/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
+ <HintPath>/Users/y/Desktop/VRTKtest/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>/Applications/Unity/Hub/Editor/2018.3.14f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -654,34 +675,34 @@
  <HintPath>/Applications/Unity/Hub/Editor/2018.3.14f1/Unity.app/Contents/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
  </Reference>
  <Reference Include="Photon3Unity3D">
- <HintPath>/Users/y/Downloads/2020VRGameTest/VRTK/Assets/Photon/PhotonLibs/Photon3Unity3D.dll</HintPath>
+ <HintPath>/Users/y/Desktop/VRTKtest/Assets/Photon/PhotonLibs/Photon3Unity3D.dll</HintPath>
  </Reference>
  <Reference Include="websocket-sharp">
- <HintPath>/Users/y/Downloads/2020VRGameTest/VRTK/Assets/Photon/PhotonLibs/WebSocket/websocket-sharp.dll</HintPath>
+ <HintPath>/Users/y/Desktop/VRTKtest/Assets/Photon/PhotonLibs/WebSocket/websocket-sharp.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Analytics.Tracker">
- <HintPath>/Users/y/Downloads/2020VRGameTest/VRTK/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
+ <HintPath>/Users/y/Desktop/VRTKtest/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Analytics.Editor">
- <HintPath>/Users/y/Downloads/2020VRGameTest/VRTK/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
+ <HintPath>/Users/y/Desktop/VRTKtest/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Analytics.StandardEvents">
- <HintPath>/Users/y/Downloads/2020VRGameTest/VRTK/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
+ <HintPath>/Users/y/Desktop/VRTKtest/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
  </Reference>
  <Reference Include="Malimbe.XmlDocumentationAttribute">
- <HintPath>/Users/y/Downloads/2020VRGameTest/VRTK/Library/PackageCache/io.extendreality.malimbe@9.6.3/Runtime/Malimbe.XmlDocumentationAttribute.dll</HintPath>
+ <HintPath>/Users/y/Desktop/VRTKtest/Library/PackageCache/io.extendreality.malimbe@9.6.3/Runtime/Malimbe.XmlDocumentationAttribute.dll</HintPath>
  </Reference>
  <Reference Include="Malimbe.MemberClearanceMethod">
- <HintPath>/Users/y/Downloads/2020VRGameTest/VRTK/Library/PackageCache/io.extendreality.malimbe@9.6.3/Runtime/Malimbe.MemberClearanceMethod.dll</HintPath>
+ <HintPath>/Users/y/Desktop/VRTKtest/Library/PackageCache/io.extendreality.malimbe@9.6.3/Runtime/Malimbe.MemberClearanceMethod.dll</HintPath>
  </Reference>
  <Reference Include="Malimbe.BehaviourStateRequirementMethod">
- <HintPath>/Users/y/Downloads/2020VRGameTest/VRTK/Library/PackageCache/io.extendreality.malimbe@9.6.3/Runtime/Malimbe.BehaviourStateRequirementMethod.dll</HintPath>
+ <HintPath>/Users/y/Desktop/VRTKtest/Library/PackageCache/io.extendreality.malimbe@9.6.3/Runtime/Malimbe.BehaviourStateRequirementMethod.dll</HintPath>
  </Reference>
  <Reference Include="Malimbe.MemberChangeMethod">
- <HintPath>/Users/y/Downloads/2020VRGameTest/VRTK/Library/PackageCache/io.extendreality.malimbe@9.6.3/Runtime/Malimbe.MemberChangeMethod.dll</HintPath>
+ <HintPath>/Users/y/Desktop/VRTKtest/Library/PackageCache/io.extendreality.malimbe@9.6.3/Runtime/Malimbe.MemberChangeMethod.dll</HintPath>
  </Reference>
  <Reference Include="Malimbe.PropertySerializationAttribute">
- <HintPath>/Users/y/Downloads/2020VRGameTest/VRTK/Library/PackageCache/io.extendreality.malimbe@9.6.3/Runtime/Malimbe.PropertySerializationAttribute.dll</HintPath>
+ <HintPath>/Users/y/Desktop/VRTKtest/Library/PackageCache/io.extendreality.malimbe@9.6.3/Runtime/Malimbe.PropertySerializationAttribute.dll</HintPath>
  </Reference>
  <Reference Include="netstandard">
  <HintPath>/Applications/Unity/Hub/Editor/2018.3.14f1/Unity.app/Contents/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
@@ -1031,31 +1052,29 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{439CD438-E254-0D06-1DE5-A21C76600AA4}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
+      <Project>{6014C02B-70D9-4412-ACCB-D7D6718A4D4B}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
     <ProjectReference Include="PhotonUnityNetworking.Utilities.PhotonPlayer.Editor.csproj">
-      <Project>{E2116396-70CF-5B9E-824D-26E3E4330BD6}</Project>      <Name>PhotonUnityNetworking.Utilities.PhotonPlayer.Editor</Name>    </ProjectReference>
+      <Project>{A0CE2AE6-82CF-F863-F0F2-6F181A609A70}</Project>      <Name>PhotonUnityNetworking.Utilities.PhotonPlayer.Editor</Name>    </ProjectReference>
     <ProjectReference Include="PunDemos.DemoHubEditor.csproj">
-      <Project>{58547D93-0AB7-C781-DA84-0998DF81EA7B}</Project>      <Name>PunDemos.DemoHubEditor</Name>    </ProjectReference>
+      <Project>{FAAC2225-F613-DDB7-7E22-E8D080ACBA9F}</Project>      <Name>PunDemos.DemoHubEditor</Name>    </ProjectReference>
     <ProjectReference Include="PunDemos.DemoSlotcarEditor.csproj">
-      <Project>{9D0F591E-55CC-37D9-919A-439E2F6A8782}</Project>      <Name>PunDemos.DemoSlotcarEditor</Name>    </ProjectReference>
+      <Project>{81E523BF-3F70-2A79-A221-5EC6B12188D8}</Project>      <Name>PunDemos.DemoSlotcarEditor</Name>    </ProjectReference>
     <ProjectReference Include="PhotonUnityNetworking.Demos.csproj">
-      <Project>{4B5941D1-A54F-E8E1-69C1-9612C4A13E24}</Project>      <Name>PhotonUnityNetworking.Demos</Name>    </ProjectReference>
+      <Project>{F054E822-2685-ED61-959B-70F8A2A8AB34}</Project>      <Name>PhotonUnityNetworking.Demos</Name>    </ProjectReference>
     <ProjectReference Include="PhotonUnityNetworking.Utilities.csproj">
-      <Project>{0BC90437-F7D2-4AEB-F4FB-DE3213433DC7}</Project>      <Name>PhotonUnityNetworking.Utilities</Name>    </ProjectReference>
-    <ProjectReference Include="VRTK.Samples.Farm.Runtime.csproj">
-      <Project>{CB6E8AD4-236A-304A-E6D8-6BA39BA36049}</Project>      <Name>VRTK.Samples.Farm.Runtime</Name>    </ProjectReference>
+      <Project>{E3566690-1862-C5A0-54D4-8F0F2DD2FB32}</Project>      <Name>PhotonUnityNetworking.Utilities</Name>    </ProjectReference>
     <ProjectReference Include="PhotonWebSocket.csproj">
-      <Project>{4ADCE7A6-0B02-A82F-95D8-6AB025368ACB}</Project>      <Name>PhotonWebSocket</Name>    </ProjectReference>
+      <Project>{073D33CF-A71A-0F68-32F2-188C06C9E23C}</Project>      <Name>PhotonWebSocket</Name>    </ProjectReference>
     <ProjectReference Include="PhotonRealtime.csproj">
-      <Project>{7F66C1C6-E00A-AAD1-61C2-5F3FE7D9718A}</Project>      <Name>PhotonRealtime</Name>    </ProjectReference>
+      <Project>{E2B21FD9-752B-671A-02B4-43C64681FF55}</Project>      <Name>PhotonRealtime</Name>    </ProjectReference>
     <ProjectReference Include="PhotonUnityNetworking.csproj">
-      <Project>{C5A07EC0-4D46-8BE1-5BF6-53D6727EA225}</Project>      <Name>PhotonUnityNetworking</Name>    </ProjectReference>
+      <Project>{CA3E834C-CA93-C748-A37B-51DA98585BF2}</Project>      <Name>PhotonUnityNetworking</Name>    </ProjectReference>
     <ProjectReference Include="PhotonChat.csproj">
-      <Project>{28906067-71F6-F95D-5F07-DA562459BD9E}</Project>      <Name>PhotonChat</Name>    </ProjectReference>
+      <Project>{9D29109E-44B8-1C59-CA23-CE82832EBCF1}</Project>      <Name>PhotonChat</Name>    </ProjectReference>
     <ProjectReference Include="PhotonUnityNetworking.Utilities.Culling.Editor.csproj">
-      <Project>{24C08C0A-1053-81E1-FD05-D8C7594C41B5}</Project>      <Name>PhotonUnityNetworking.Utilities.Culling.Editor</Name>    </ProjectReference>
+      <Project>{4CD38583-C0DC-BDCB-ABEC-0A30FDA2591E}</Project>      <Name>PhotonUnityNetworking.Utilities.Culling.Editor</Name>    </ProjectReference>
     <ProjectReference Include="PhotonUnityNetworking.Editor.csproj">
-      <Project>{41CFDB2F-A904-6038-A202-A3B9BFB32D84}</Project>      <Name>PhotonUnityNetworking.Editor</Name>    </ProjectReference>
+      <Project>{7957240F-9B5D-9F88-4F9A-3DBCEDC943E3}</Project>      <Name>PhotonUnityNetworking.Editor</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
