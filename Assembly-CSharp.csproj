@@ -67,6 +67,7 @@
      <Compile Include="Assets\Photon\PhotonRealtime\Demos\DemoLoadBalancing\ConnectAndJoinRandomLb.cs" />
      <Compile Include="Assets\Player.cs" />
      <Compile Include="Assets\PUNLauncher.cs" />
+     <Compile Include="Assets\Scripts\PanelTrigger.cs" />
      <Compile Include="Assets\transfer\Scripts\Character\IKTargetConnect.cs" />
      <Compile Include="Assets\transfer\Scripts\Character\ScriptAdder.cs" />
      <Compile Include="Assets\transfer\Scripts\GamePlay\GameController.cs" />

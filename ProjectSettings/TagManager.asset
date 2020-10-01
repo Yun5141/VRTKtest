@@ -11,6 +11,7 @@ TagManager:
   - Neck
   - LH
   - RH
+  - Mass
   layers:
   - Default
   - TransparentFX
