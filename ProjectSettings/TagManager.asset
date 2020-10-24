@@ -4,16 +4,10 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - ExcludeTeleport
-  - TeleportIgnore
-  - Character 1
-  - Character 2
   - Neck
-  - LH
   - RH
+  - LH
   - Mass
-  - projectile
-  - FxTemporaire
   - RightPlayArea
   - LeftPlayArea
   layers:
@@ -25,10 +19,10 @@ TagManager:
   - UI
   - 
   - 
-  - PostProcessing
-  - PointerGrabbableObject
-  - 
   - Mass
+  - 
+  - 
+  - 
   - 
   - 
   - 
