@@ -967,3 +967,4 @@ f0c4eb24258257daca58a9939f0894d2 PhotonUnityNetworking.Demos.dll:Photon.Pun.Demo
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.InitEnv
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.GameController
 101c828e3320e7b7dbf4b8edfa0cff18 Assembly-CSharp.dll:.PanelTrigger
+71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.InitAvatarPosition

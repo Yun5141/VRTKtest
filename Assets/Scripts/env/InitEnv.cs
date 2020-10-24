@@ -4,21 +4,22 @@ using UnityEngine;
 
 public class InitEnv : MonoBehaviour
 {
-    private GameObject Masses;
-    private GameObject RightPlayArea;
+    public GameObject RightPlayArea;
     private GameObject LeftPlayArea;
 
     private void Awake()
     {
 
-        RightPlayArea = transform.Find("playArea/RightPlayArea").gameObject;
+        //RightPlayArea = transform.Find("playArea/RightPlayArea").gameObject;
 
         initWalls(getAreaVertices(RightPlayArea));
 
         initOppositePlayArea();
 
     }
-    /* Initialize Invisible Walls */
+
+
+    /* Initialize Block Volumes */
     /*
      return array: Vector3 param[4]
      element 0: top left position
@@ -49,12 +50,10 @@ public class InitEnv : MonoBehaviour
 
         return param;
     }
-
     private Vector3 getCenterOfTwoVertices(Vector3 A, Vector3 B)
     {
         return new Vector3((A.x + B.x) * 0.5f, (A.y + B.y) * 0.5f, (A.z + B.z) * 0.5f);
     }
-
     private float getDistanceOfTwoVertices(Vector3 A, Vector3 B)
     {
         return Mathf.Sqrt(Mathf.Pow(A.x - B.x, 2) + Mathf.Pow(A.y - B.y, 2) + Mathf.Pow(A.z - B.z, 2));
@@ -63,7 +62,7 @@ public class InitEnv : MonoBehaviour
     {
 
         GameObject[] Walls = new GameObject[4];
-        GameObject WallsParent = transform.Find("playArea/RightPlayArea/Walls").gameObject;
+        GameObject WallsParent = RightPlayArea.transform.Find("Walls").gameObject;
         for (int i = 0; i < 4; i++)
         {
 
@@ -93,6 +92,7 @@ public class InitEnv : MonoBehaviour
         leftPos.z = 0 - leftPos.z;
         LeftPlayArea = Instantiate(RightPlayArea, leftPos, Quaternion.identity);
         LeftPlayArea.name = "LeftPlayArea";
+        LeftPlayArea.tag = "LeftPlayArea";
 
         LeftPlayArea.transform.parent = RightPlayArea.transform.parent;
 

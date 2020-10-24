@@ -30,15 +30,21 @@ public class PUNLauncher : MonoBehaviourPunCallbacks
     {
         if (PhotonNetwork.IsMasterClient)
         {
-            if (Camera) {
-                //  change camera position accordingly
-                Camera.transform.position = new Vector3(0, 3, 0);
-            }
+            Transform RightInitAvatarZone = GameObject.FindGameObjectWithTag("RightPlayArea").transform.Find("InitAvatarZone").transform;
+            Vector3 pos = new Vector3(RightInitAvatarZone.position.x, 0, RightInitAvatarZone.position.z);
+            Camera.transform.position = pos;
+            print("GameInfo: Moved Camera to right position successfully");
+
             Player1 = PhotonNetwork.Instantiate("Rig", new Vector3(0, 0, 0), Quaternion.identity, 0);
             Debug.Log("GameInfo: Instantiate Player 1 Successfully");
         }
         else
         {
+            Transform LeftInitAvatarZone = GameObject.FindGameObjectWithTag("LeftPlayArea").transform.Find("InitAvatarZone").transform;
+            Vector3 pos = new Vector3(LeftInitAvatarZone.position.x, 0, LeftInitAvatarZone.position.z);
+            Camera.transform.position = pos;
+            print("GameInfo: Moved Camera to left position successfully");
+
             Player2 = PhotonNetwork.Instantiate("Rig", new Vector3(0, 0, 0), Quaternion.identity, 0);
             Debug.Log("GameInfo: Instantiate Player 2 Successfully");
         }
