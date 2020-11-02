@@ -128,7 +128,7 @@ public class InitEnv : MonoBehaviour
     private float getSelfHalfZLength(GameObject obj)
     {
         Vector3 length_raw = obj.GetComponent<MeshFilter>().mesh.bounds.size;
-        float z = length_raw.z * obj.transform.lossyScale.z;
+        float z = length_raw.z * obj.transform.lossyScale.z * 0.5f;
         return z;
     }
     private void initMasses()
@@ -146,8 +146,8 @@ public class InitEnv : MonoBehaviour
 
         Vector3[] initZoneAreaVertices = getAreaVertices(initZone);
         Vector3 z_boundaryCenterPoint = GameController.InitMassZoneFlag == 0 ? 
-                                        getCenterOfTwoVertices(initZoneAreaVertices[0], initZoneAreaVertices[1]) :
-                                        getCenterOfTwoVertices(initZoneAreaVertices[2], initZoneAreaVertices[3]);
+                                        getCenterOfTwoVertices(initZoneAreaVertices[0], initZoneAreaVertices[3]) :
+                                        getCenterOfTwoVertices(initZoneAreaVertices[1], initZoneAreaVertices[2]);
         
         Vector3 preInitPos = z_boundaryCenterPoint;
         float selfHalfZLength = 0;
