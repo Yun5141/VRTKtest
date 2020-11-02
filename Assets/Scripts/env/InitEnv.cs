@@ -4,8 +4,14 @@ using UnityEngine;
 
 public class InitEnv : MonoBehaviour
 {
+    public GameObject Env;
+
     public GameObject RightPlayArea;
     private GameObject LeftPlayArea;
+
+    public GameObject TemplateMass;
+    public float MassSizeScale = 0.1f;
+    public float massGap = 1.0f;
 
     private void Awake()
     {
@@ -16,6 +22,13 @@ public class InitEnv : MonoBehaviour
 
         initOppositePlayArea();
 
+
+    }
+
+    private void Start() 
+    {
+        
+        initMasses();
     }
 
 
@@ -26,6 +39,8 @@ public class InitEnv : MonoBehaviour
      element 1: bottom left position
      element 2: bottom right position
      element 3: top right position 
+
+     the height of the four vertices is same as the center point of the passed-in go
     */
     private Vector3[] getAreaVertices(GameObject Area)
     {
@@ -62,11 +77,11 @@ public class InitEnv : MonoBehaviour
     {
 
         GameObject[] Walls = new GameObject[4];
-        GameObject WallsParent = RightPlayArea.transform.Find("Walls").gameObject;
+        GameObject WallsParent = RightPlayArea.transform.Find("BlockVolumes").gameObject;
         for (int i = 0; i < 4; i++)
         {
 
-            Walls[i] = new GameObject("Fence Wall");
+            Walls[i] = new GameObject("Block Volume");
             Walls[i].AddComponent<BoxCollider>();
 
             Walls[i].transform.localEulerAngles = i == 0 ? new Vector3(0, 0, 0) : Walls[i - 1].transform.localEulerAngles + new Vector3(0, 90, 0);
@@ -74,8 +89,9 @@ public class InitEnv : MonoBehaviour
             Walls[i].transform.position = getCenterOfTwoVertices(areaVertices[i], areaVertices[(i + 1) > 3 ? 0 : (i + 1)]);
             Walls[i].GetComponent<BoxCollider>().size = new Vector3(1, 5, getDistanceOfTwoVertices(areaVertices[i], areaVertices[(i + 1) > 3 ? 0 : (i + 1)]));
 
+            Walls[i].transform.localScale = new Vector3(Walls[i].transform.localScale.x, 2.0f, Walls[i].transform.localScale.z);
             Walls[i].transform.SetParent(WallsParent.transform);
-            Walls[i].layer = LayerMask.NameToLayer("Ignore Raycast");
+            Walls[i].layer = LayerMask.NameToLayer("BlockVolume");
             //Walls[i].AddComponent<IgnoreRightPointer>();
             //Walls[i].AddComponent<IgnoreLeftPointer>();
 
@@ -103,6 +119,72 @@ public class InitEnv : MonoBehaviour
             leftPos = RightChilds[i].position;
             leftPos.z = 0 - leftPos.z;
             LeftChilds[i].position = leftPos;
+        }
+
+    }
+
+    
+    /* Initialize Masses*/
+    private float getSelfHalfZLength(GameObject obj)
+    {
+        Vector3 length_raw = obj.GetComponent<MeshFilter>().mesh.bounds.size;
+        float z = length_raw.z * obj.transform.lossyScale.z;
+        return z;
+    }
+    private void initMasses()
+    {
+
+        GameObject MassParent = Env.transform.Find("Masses").gameObject;
+
+        GameObject initZone = GameController.InitMassZoneFlag == 0? 
+                                RightPlayArea.transform.Find("InitMassZone").gameObject : 
+                                LeftPlayArea.transform.Find("InitMassZone").gameObject;
+
+        int z_Sign = GameController.InitMassZoneFlag == 0? 1 : -1;
+
+        // 1st mass position
+
+        Vector3[] initZoneAreaVertices = getAreaVertices(initZone);
+        Vector3 z_boundaryCenterPoint = GameController.InitMassZoneFlag == 0 ? 
+                                        getCenterOfTwoVertices(initZoneAreaVertices[0], initZoneAreaVertices[1]) :
+                                        getCenterOfTwoVertices(initZoneAreaVertices[2], initZoneAreaVertices[3]);
+        
+        Vector3 preInitPos = z_boundaryCenterPoint;
+        float selfHalfZLength = 0;
+        float preHalfZLength = 0;
+
+        foreach (var x in GameController.MassWeights)
+        {
+            GameObject newMass = GameObject.CreatePrimitive(PrimitiveType.Cube);
+            newMass.AddComponent<Rigidbody>();
+            newMass.AddComponent<Mass>();
+            newMass.transform.SetParent(MassParent.transform);
+            
+            newMass.name = x.Key.ToString();
+            newMass.GetComponent<Rigidbody>().mass = x.Value;
+            newMass.transform.localScale = new Vector3 (1.0f,1.0f,1.0f) * x.Value * MassSizeScale;
+            
+            if(x.Key == 1)
+            {
+                selfHalfZLength = getSelfHalfZLength(newMass);
+                newMass.transform.position = new Vector3(z_boundaryCenterPoint.x, z_boundaryCenterPoint.y, z_boundaryCenterPoint.z + z_Sign * selfHalfZLength);
+                Debug.Log("1st mass pos: " + newMass.transform.position);
+            }
+            else if (x.Key > 1)
+            {
+                selfHalfZLength = getSelfHalfZLength(newMass);
+                newMass.transform.position = new Vector3(z_boundaryCenterPoint.x, z_boundaryCenterPoint.y, preInitPos.z + z_Sign*(preHalfZLength + massGap + selfHalfZLength));
+                print(x.Key +"th mass pos: " + newMass.transform.position);
+            }
+            else
+            {
+                Debug.Log("ERROR Info: mass name < 1");
+            }
+
+
+            preHalfZLength = selfHalfZLength;
+            preInitPos = newMass.transform.position;
+            
         }
     }
 }

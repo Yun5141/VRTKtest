@@ -40,15 +40,13 @@ public class Mass : MonoBehaviourPun
     private GameObject RightPlayArea;
     private float[] LeftAreaRange;
     private float[] RightAreaRange;
-    private string currentPlayArea = "RightPlayArea";
+    private string currentPlayArea;
 
     /* Initial Setup */
     private void Awake()
     {
         this.gameObject.layer = LayerMask.NameToLayer("Mass");
         this.gameObject.tag = "Mass";
-
-        setupNameWeightScale();
 
         io = this.GetComponent<VRTK_InteractableObject>();
         grabAttach = this.GetComponent<VRTK_TrackObjectGrabAttach>();
@@ -60,11 +58,6 @@ public class Mass : MonoBehaviourPun
         setupHighlighter();
 
         setupNetworking();
-
-    }
-
-    private void setupNameWeightScale()
-    {
 
     }
 
@@ -114,6 +107,8 @@ public class Mass : MonoBehaviourPun
         LeftPlayArea = GameObject.FindGameObjectWithTag("LeftPlayArea");
         RightAreaRange = getBoundary(RightPlayArea);
         LeftAreaRange = getBoundary(LeftPlayArea);
+
+        currentPlayArea = GameController.InitMassZoneFlag == 0 ? "RightPlayArea" : "LeftPlayArea";
     }
 
     private void FixedUpdate()
