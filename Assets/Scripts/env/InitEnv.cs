@@ -10,8 +10,9 @@ public class InitEnv : MonoBehaviour
     private GameObject LeftPlayArea;
 
     public GameObject TemplateMass;
-    public float MassSizeScale = 0.1f;
-    public float massGap = 1.0f;
+    public float lerpMin = 0.6f;
+    public float lerpMax = 1.1f;
+   public float massGap = 1.0f;
 
     private void Awake()
     {
@@ -162,7 +163,7 @@ public class InitEnv : MonoBehaviour
             
             newMass.name = x.Key.ToString();
             newMass.GetComponent<Rigidbody>().mass = x.Value;
-            newMass.transform.localScale = new Vector3 (1.0f,1.0f,1.0f) * x.Value * MassSizeScale;
+            newMass.transform.localScale = new Vector3 (1.0f,1.0f,1.0f) * Mathf.Lerp(lerpMin, lerpMax, x.Value / (GameController.TotalWeight / 2.0f));
             
             if(x.Key == 1)
             {

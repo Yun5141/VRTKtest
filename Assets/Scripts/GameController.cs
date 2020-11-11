@@ -5,6 +5,7 @@ using UnityEngine;
 public class GameController : MonoBehaviour
 {
 
+    [SerializeField]
     public static int TotalWeight = 6;
     public int massNum = 3;
 
@@ -36,49 +37,67 @@ public class GameController : MonoBehaviour
         int halfWeightSum = TotalWeight / 2;
 
         print("leftMassNum: " + LeftMassNum + "; RightMassNum: " + RightMassNum);
-    
+        
         int count = 1;
 
-        int restWeightSum = halfWeightSum;
+        int restWeightSum = halfWeightSum - LeftMassNum;
         int w;
         print("LEFT");
         for (int i = 1; i <= LeftMassNum; i += 1)
         {
             count = i;
-            print("count: "+ count);
-            print("restWSum: "+ restWeightSum);
-            if(i == LeftMassNum)
-            {
 
-                MassWeights.Add(count, restWeightSum);
-            }
-            else
+            int min_w = 1;
+            int random_extra = 0;
+            if(restWeightSum > 0)
             {
-                w = restWeightSum == LeftMassNum - i + 1 ? 1 : Random.Range(1, restWeightSum);
-                print("w: "+w);
-                MassWeights.Add(count,w);
-                restWeightSum = restWeightSum - w;
+                if(LeftMassNum == i)
+                {
+                    random_extra = restWeightSum;
+                    restWeightSum = 0;
+                }
+                else
+                {
+                    if(restWeightSum > 1)
+                        random_extra = Mathf.FloorToInt(Random.Range(0.0f, 1.0f) * restWeightSum);
+                    else
+                        random_extra = Random.Range(0.0f, 1.0f) > 0.5f ? 1 : 0;
+                }
+                restWeightSum -= random_extra;
             }
+
+            MassWeights.Add(count, min_w + random_extra);
         }
         print("RIGHT");
-        restWeightSum = halfWeightSum;
+        restWeightSum = halfWeightSum - RightMassNum;
         for(int j = count + 1; j <= massNum; j += 1)
         {
             count = j;
             print("count: "+ count);
             print("restWSum: "+ restWeightSum);
-            if(j == massNum)
+
+            int min_w = 1;
+            int random_extra = 0;
+            if(restWeightSum > 0)
             {
-                MassWeights.Add(count, restWeightSum);
+                if(massNum == j)
+                {
+                    random_extra = restWeightSum;
+                    restWeightSum = 0;
+                }
+                else
+                {
+                    if(restWeightSum > 1)
+                        random_extra = Mathf.FloorToInt(Random.Range(0.0f, 1.0f) * restWeightSum);
+                    else
+                        random_extra = Random.Range(0.0f, 1.0f) > 0.5f ? 1 : 0;
+                }
+                restWeightSum -= random_extra;
             }
-            else
-            {
-                w = restWeightSum == massNum - j + 1 ? 1 : Random.Range(1, restWeightSum);
-                print("w: "+w);
-                MassWeights.Add(count,w);
-                restWeightSum = restWeightSum - w;
-            }
+
+            MassWeights.Add(count, min_w + random_extra);
         }
+        
         print("FINAL");
         foreach(var x in MassWeights)
         print(x.Key +" "+ x.Value);
